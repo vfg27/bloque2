@@ -16,3 +16,5 @@ call(["echo \
 call(["echo 'y' | sudo apt-get update"], shell=True)
 call(["sudo apt-get install docker-ce docker-ce-cli containerd.io"], shell=True)
 call(["sudo docker run hello-world"], shell=True)
+call(["sudo docker build -t 47/productpage ."], shell=True)
+call(["sudo docker run -p 9080:80 47/productpage"], shell=True)
